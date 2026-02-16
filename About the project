@@ -1,0 +1,92 @@
+Machine Learning Projects — Assignment
+
+This repository contains three machine learning tasks demonstrating modern AI techniques including NLP with transformers, multimodal learning, and end-to-end model deployment.
+
+Task 1 — News Topic Classifier Using BERT
+
+Built a news classification model using BERT to categorize headlines into topics.
+
+Dataset
+
+AG News
+
+Key Steps
+
+Tokenized text using BERT tokenizer
+
+Fine-tuned pretrained transformer
+
+Evaluated using Accuracy and F1-score
+
+Deployed interactive demo using Gradio/Streamlit
+
+Outcome
+
+A high-accuracy NLP classifier capable of predicting news categories such as World, Sports, Business, and Sci/Tech.
+
+Task 2 — Multimodal Housing Price Prediction
+(Images + Tabular Data)
+
+Developed a multimodal model to predict house prices using both structured data and property images.
+
+Key Steps
+
+Extracted image features using CNN (ResNet)
+
+Processed tabular features (beds, baths, area)
+
+Combined both modalities into a single model
+
+Evaluated using MAE and RMSE
+
+Outcome
+
+Demonstrates how combining visual and numerical data improves prediction performance in real-world scenarios.
+
+Task 3 — Customer Churn Prediction Pipeline
+
+Created an end-to-end machine learning pipeline to predict telecom customer churn.
+
+Dataset
+
+Telco Customer Churn
+
+Key Steps
+
+Data preprocessing and feature encoding
+
+Model training (Logistic Regression & Random Forest)
+
+Hyperparameter tuning using GridSearchCV
+
+Exported production-ready pipeline
+
+Outcome
+
+A deployable model that predicts customer churn to support retention strategies.
+
+Technologies Used
+
+Python
+
+Scikit-learn
+
+PyTorch
+
+Transformers
+
+Pandas & NumPy
+
+Gradio / Streamlit
+
+Conclusion
+
+These projects showcase:
+
+Transformer-based NLP
+
+Multimodal deep learning
+
+Production-ready ML pipelines
+
+Together, they demonstrate practical machine learning skills applicable to real-world problems.
