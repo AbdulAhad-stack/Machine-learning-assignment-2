@@ -1,0 +1,82 @@
+Using Colab cache for faster access to the 'telco-customer-churn' dataset.
+Dataset downloaded to: /kaggle/input/telco-customer-churn
+['WA_Fn-UseC_-Telco-Customer-Churn.csv']
+Dataset shape: (7043, 21)
+
+Columns:
+Index(['customerID', 'gender', 'SeniorCitizen', 'Partner', 'Dependents',
+       'tenure', 'PhoneService', 'MultipleLines', 'InternetService',
+       'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport',
+       'StreamingTV', 'StreamingMovies', 'Contract', 'PaperlessBilling',
+       'PaymentMethod', 'MonthlyCharges', 'TotalCharges', 'Churn'],
+      dtype='object')
+
+Dataset Info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 7043 entries, 0 to 7042
+Data columns (total 21 columns):
+ #   Column            Non-Null Count  Dtype  
+---  ------            --------------  -----  
+ 0   customerID        7043 non-null   object 
+ 1   gender            7043 non-null   object 
+ 2   SeniorCitizen     7043 non-null   int64  
+ 3   Partner           7043 non-null   object 
+ 4   Dependents        7043 non-null   object 
+ 5   tenure            7043 non-null   int64  
+ 6   PhoneService      7043 non-null   object 
+ 7   MultipleLines     7043 non-null   object 
+ 8   InternetService   7043 non-null   object 
+ 9   OnlineSecurity    7043 non-null   object 
+ 10  OnlineBackup      7043 non-null   object 
+ 11  DeviceProtection  7043 non-null   object 
+ 12  TechSupport       7043 non-null   object 
+ 13  StreamingTV       7043 non-null   object 
+ 14  StreamingMovies   7043 non-null   object 
+ 15  Contract          7043 non-null   object 
+ 16  PaperlessBilling  7043 non-null   object 
+ 17  PaymentMethod     7043 non-null   object 
+ 18  MonthlyCharges    7043 non-null   float64
+ 19  TotalCharges      7043 non-null   object 
+ 20  Churn             7043 non-null   object 
+dtypes: float64(1), int64(2), object(18)
+memory usage: 1.1+ MB
+
+Churn distribution:
+Churn
+No     5174
+Yes    1869
+Name: count, dtype: int64
+Data cleaning completed.
+Training samples: 5634
+Testing samples: 1409
+Preprocessing pipeline created.
+/tmp/ipython-input-1676668340.py:70: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df["TotalCharges"].fillna(df["TotalCharges"].median(), inplace=True)
+/tmp/ipython-input-1676668340.py:80: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df["TotalCharges"].fillna(df["TotalCharges"].median(), inplace=True)
+Logistic Regression Accuracy: 0.8211497515968772
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.86      0.90      0.88      1036
+           1       0.69      0.60      0.64       373
+
+    accuracy                           0.82      1409
+   macro avg       0.77      0.75      0.76      1409
+weighted avg       0.82      0.82      0.82      1409
+
+Best Parameters: {'classifier__C': 10}
+Tuned Model Accuracy: 0.8211497515968772
+Random Forest Accuracy: 0.794180269694819
+Pipeline saved successfully as telco_churn_pipeline.pkl
